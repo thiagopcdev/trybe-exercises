@@ -1,0 +1,18 @@
+h1, p{
+    text-align: center;
+}
+
+
+.list{
+    list-style: none;
+    text-align: center;
+    
+}
+
+li:hover{
+    background-color:burlywood;
+}
+
+li:active{
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
