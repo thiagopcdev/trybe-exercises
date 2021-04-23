@@ -104,3 +104,27 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
         console.log("Nenhum valor ímpar encontrado!");
     }
     
+//7:
+    let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+    let menor = numbers[0];
+    for(let i = 0; i < numbers.length; i += 1){
+        
+        if (numbers[i] < menor){ menor = numbers[i];}
+    }
+    console.log(menor);
+//8: 
+    let array = [];
+    for(let i = 1; i <=25; i += 1){
+        array.push(i * 2)
+    } 
+    console.log(array);
+//9: 
+
+    let array = [];
+    for(let i = 1; i <=25; i += 1){
+        array.push(i * 2)
+    } 
+    for(let i = 0 ; i < array.length; i += 1){
+        array[i] = (array[i] / 2);
+    } 
+    console.log(array);
