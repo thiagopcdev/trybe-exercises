@@ -7,7 +7,7 @@ function verificaPalindromo (word){
     let polindromo = false;
     let letraDiferente = 0;
 
-    for (let i = palavra.length -1; i >= 0; i -= 1 ){
+    for (let i = palavra.length -1; i >= 0; i -= 1){
         palavraInversa.push(palavra[i]);
     }
     for (let i in palavra){
@@ -22,3 +22,15 @@ function verificaPalindromo (word){
 console.log(verificaPalindromo('desenvolvimento'));
 
 //2 - Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
+
+function higherNumber (numeros) {
+     let maiorIndice = 0;
+    
+     for (let i in numeros){
+         if(maiorIndice < numeros[i]) maiorIndice = i;
+     }
+    return maiorIndice;
+
+}
+
+console.log(higherNumber([2, 3, 6, 7, 10, 1]));
