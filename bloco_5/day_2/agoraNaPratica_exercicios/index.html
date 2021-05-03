@@ -111,6 +111,28 @@
         h3.innerText = 'H3 de numero: ' + i2;
         mainContent.appendChild(h3);
     }
+
+    /* Modificando Exercicio 1 */
+    let h1Change = document.querySelector('body h1');
+    h1Change.className = 'title';
+    /* Modificando Exercicio 2 */
+    let h3Change = document.querySelectorAll('div h3');
+    for(let i3 = 0; i3 < h3Change.length; i3 += 1){
+        
+        h3Change[i3].className = 'description';
+    }
+   /* Modificando Exercicio 3 */
+   let pai = document.querySelector('.main-content');
+   let filho = document.querySelector('.left-content');
+   pai.removeChild(filho);
+    /* Modificando Exercicio 4 */
+    document.querySelector('.right-content').style.marginLeft = "auto";
+    /* Modificando Exercicio 5 */
+    document.querySelector('.right-content').style.backgroundColor = "green";
+    /* Modificando Exercicio 6 */
+    let list = document.querySelectorAll('.right-content ul')
+    list.removeChild(list.childNodes[0]);
+
     </script>
   </body>
 </html>
