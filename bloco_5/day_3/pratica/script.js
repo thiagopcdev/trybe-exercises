@@ -37,6 +37,7 @@ function createDaysOfTheWeek() {
         dayList.appendChild(dayLi);
       } else{
         dayLi.innerHTML = day;
+        dayLi.className = 'day';
         dayList.appendChild(dayLi);
       }
     }
@@ -105,6 +106,26 @@ function showHolyDays() {
   }
   showFriday();
   //Exercicio 6
+  function zoom(){
+    const liDays = document.querySelectorAll('.day');
+    
+    for (let i in liDays){
+      liDays[i].addEventListener('mouseover', function(event){
+        
+          event.target.style.fontSize = '30px';
+          event.target.style.fontWeight = '600';
+      
+          liDays[i].addEventListener('mouseout', function(event) {
+            event.target.style.fontWeight = '200';
+            event.target.style.fontSize = '20px';
+          })
+     })
+    }
+  }
+
+  
+  zoom();
+  
   //Exercicio 7
   //Exercicio 8
   //Exercicio 9
