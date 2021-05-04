@@ -43,11 +43,68 @@ function createDaysOfTheWeek() {
   };
   createDaysOfTheMonth();
 
+  //Exercicio 2
+  function holyDayButton(bttName) {
+    const divButtonsContainer = document.querySelector('.buttons-container');
+    const button = document.createElement('button');
+    button.id= 'btn-holyday';
+    button.innerHTML = bttName;
+    divButtonsContainer.appendChild(button);
+  }
+
+  holyDayButton('Feriados');
   //Exercicio 3
+function showHolyDays() {
+    const holyButton = document.querySelector('#btn-holyday');
+    const holydays = document.querySelectorAll('.holyday');
+    const originalColor = 'rgb(238,238,238)';
+    const newColor = 'red';
+
+    holyButton.addEventListener('click', function(){
+      for(i = 0; i < holydays.length; i += 1){
+
+        if(holydays[i].style.backgroundColor == newColor){
+          holydays[i].style.backgroundColor = originalColor;
+        }else{
+          holydays[i].style.backgroundColor = newColor;
+        }
+      }
+    })
+  };
+  showHolyDays();
   //Exercicio 4
+  function fridayDayButton(bttName) {
+    const divButtonsContainer = document.querySelector('.buttons-container');
+    const button = document.createElement('button');
+    button.id= 'btn-friday';
+    button.innerHTML = bttName;
+    divButtonsContainer.appendChild(button);
+  }
+
+  fridayDayButton('Sexta-Feira');
   //Exercicio 5
+  function showFriday() {
+    const fridayButton = document.querySelector('#btn-friday');
+    const fridayDays = document.querySelectorAll('.friday');
+    const day = 'FRIDAY';
+    const originalValue = [];
+
+    for (let i in fridayDays){
+      originalValue.push(fridayDays[i].innerHTML);
+    }
+    fridayButton.addEventListener('click', function(){
+
+      for(let i in fridayDays){
+        if (fridayDays[i].innerHTML == day){
+          fridayDays[i].innerHTML = originalValue[i];
+        }else {
+          fridayDays[i].innerHTML = day;
+        }
+      }
+    })
+  }
+  showFriday();
   //Exercicio 6
   //Exercicio 7
   //Exercicio 8
   //Exercicio 9
-  //Exercicio 10
