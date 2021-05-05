@@ -108,24 +108,66 @@ function showHolyDays() {
   //Exercicio 6
   function zoom(){
     const liDays = document.querySelectorAll('.day');
-    
-    for (let i in liDays){
-      liDays[i].addEventListener('mouseover', function(event){
-        
-          event.target.style.fontSize = '30px';
-          event.target.style.fontWeight = '600';
-      
-          liDays[i].addEventListener('mouseout', function(event) {
-            event.target.style.fontWeight = '200';
-            event.target.style.fontSize = '20px';
-          })
-     })
-    }
-  }
-
-  
+    for (let i of liDays){
+      i.addEventListener('mouseover', (event) => {
+        event.target.style.fontSize = '30px';
+        event.target.style.fontWeight = '600';
+      });
+      i.addEventListener('mouseout', (event) => {
+        event.target.style.fontWeight = '200';
+        event.target.style.fontSize = '20px';
+      });
+    };
+  };
   zoom();
   
   //Exercicio 7
+  function newTaskSpan(name) {
+    const myContainer = document.querySelector('.my-tasks');
+    let span = document.createElement('span');
+    span.innerHTML = name;
+    myContainer.appendChild(span);
+
+  }
+  newTaskSpan('cozinhar');
+
   //Exercicio 8
+  function addLegend(cor) {
+    const myContainer = document.querySelector('.my-tasks');
+    let div = document.createElement('div');
+    div.className = 'task';
+    div.style.backgroundColor = cor;
+    myContainer.appendChild(div);
+  }
+  addLegend('red');
   //Exercicio 9
+  function selectTask(){
+    let taskselected = document.getElementsByClassName('task selected');
+    let tasks = document.querySelector('.task');
+
+    tasks.addEventListener('click', (e) => {
+      if (taskselected.length === 0){
+        e.target.className = 'task selected';
+      }else {
+        e.target.className = 'task';
+      }
+    })
+  }
+  selectTask();
+  //Exercicio 10
+  function changeDayColor() {
+  let selectDay = document.querySelector('#day');
+  let divTask = document.querySelector('.task');
+  let taskselected = document.getElementsByClassName('task selected');
+  let taskColor = divTask.style.backgroundColor;
+  
+    selectDay = addEventListener('click', (e) => {
+
+      if((taskselected.length > 0) && (e.target.style.color != taskColor)) {
+        e.target.style.color = taskselected[0].style.backgroundColor;
+      } else if ((e.target.style.color === taskColor) && (taskselected.length !== 0)) {
+        e.target.style.color = 'rgb(119,119,119)';
+      }
+    })
+  }
+  changeDayColor();
