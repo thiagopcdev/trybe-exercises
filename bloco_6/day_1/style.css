@@ -68,6 +68,12 @@ header {
     margin-bottom: 1vh;
 }
 
+select {
+    text-align: center;
+    text-align-last: center;
+    width: 20%;
+}
+
 footer {
     background-color: white;
     width: 80%;
