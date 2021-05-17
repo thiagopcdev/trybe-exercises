@@ -1,0 +1,49 @@
+body {
+    margin: 2vh 2vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+h1 {
+    font-size: 28px;
+}
+h2 {
+   
+}
+p {
+    line-height: 20px;
+    font-size: 18px;
+}
+img {
+    max-width: 100%;
+}
+
+figure {
+    margin: 0;
+    
+    
+}
+
+@media screen and (min-width: 775px) {
+    body {
+        background-color: red;
+    }
+    
+    p {
+        max-width: 80%;
+        margin: auto;
+    }
+    figure {
+        margin: 1vw;
+        
+        
+    }
+    
+    div {
+        display: flex;
+        max-width: 50%;
+        margin: auto;
+       
+        
+    }
+}
