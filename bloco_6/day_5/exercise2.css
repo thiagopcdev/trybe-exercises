@@ -1,0 +1,101 @@
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    margin: 10px;
+}
+header {
+    background-color:rgb(73, 73, 6);
+    margin: 0px;
+}
+header p {
+
+   color: rgb(140, 240, 221);
+}
+nav ul{
+    display: flex;
+    text-align: center;
+    background-color:rgb(44, 44, 4);
+    color: whitesmoke;
+    padding: 0;
+}
+
+nav ul li{
+    list-style: none;
+    flex-grow: 1;
+    opacity: 0.8;
+}
+
+nav ul li:hover{
+    opacity: 1;
+}
+
+.aside-one {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.aside-two {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 22px;
+    text-align: center;
+}
+h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    line-height: 20px;
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+@media screen and (min-width: 500px) {
+
+    .aside-one ul, .aside-two ul {
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    .main-content {
+        max-width: 75%;
+        margin: 0 auto;
+    }
+
+    .asides-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .aside-two {
+        margin-left: 5vw;
+    }
+
+}
