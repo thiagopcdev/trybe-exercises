@@ -21,8 +21,8 @@ header {
     margin: 0px;
 }
 header p {
-
-   color: rgb(140, 240, 221);
+    font-size: 20px;
+    color: rgb(140, 240, 221);
 }
 nav ul{
     display: flex;
@@ -80,6 +80,10 @@ footer {
         margin: 0 auto;
     }
 
+    header p {
+        font-size: 30px;
+    }
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -98,4 +102,15 @@ footer {
         margin-left: 5vw;
     }
 
+    h1 {
+        font-size: 32px
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    header p {
+        font-size: 50px;
+    }
 }
