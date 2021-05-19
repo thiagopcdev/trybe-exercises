@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+<body>
+    <section>
+        <p>Você clicou no botão <span id="contador">0</span> vezes!</p>
+        <button id="botao">Press Here!</button>
+    </section>
+    <script>
+        const botao = document.getElementById('botao');
+        const contador = document.getElementById('contador');
+        let qntClicks = 0
+        botao.addEventListener('click', () => {
+            contador.innerHTML = qntClicks += 1;
+        });
+    </script>
+</body>
+</html>
