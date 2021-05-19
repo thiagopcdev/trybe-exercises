@@ -22,3 +22,10 @@ function testingScope(escopo) {
   });
 
   console.log(`Numero ordenados em ordem crescente ${oddsAndEvens}`);
+
+  //Maneira 2
+  const oddsAndEvens = [13, 3, 4, 10, 7, 2];
+
+  oddsAndEvens.sort((a,b) => a - b);
+
+  console.log(`Numero ordenados em ordem crescente ${oddsAndEvens}`);
